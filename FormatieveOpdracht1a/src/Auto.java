@@ -7,6 +7,7 @@ public class Auto {
         this.prijsPerDag = prPd;
     }
     public void setPrijsPerDag(double prPd){
+        this.prijsPerDag = prPd;
     }
     public double getPrijsPerDag(){
         return this.prijsPerDag;

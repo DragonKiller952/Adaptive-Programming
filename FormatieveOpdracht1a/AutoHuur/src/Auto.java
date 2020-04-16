@@ -15,10 +15,7 @@ public class Auto {
 
     @Override
     public String toString() {
-        return "Auto{" +
-                "type='" + type + '\'' +
-                ", prijsPerDag=" + prijsPerDag +
-                '}';
+        return type + " met prijs per dag: " + prijsPerDag;
     }
 }
 

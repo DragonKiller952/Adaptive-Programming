@@ -12,8 +12,14 @@ public class Auto {
     public double getPrijsPerDag(){
         return this.prijsPerDag;
     }
-    public String toString(){
-        return this.type;
-    }
 
+    @Override
+    public String toString() {
+        return "Auto{" +
+                "type='" + type + '\'' +
+                ", prijsPerDag=" + prijsPerDag +
+                '}';
+    }
 }
+
+

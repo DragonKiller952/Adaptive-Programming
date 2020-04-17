@@ -33,7 +33,7 @@ public class Persoon {
         }
         return null;
     }
-    public String verkoop(String g,Persoon koper){
+    public String verkoop(Game g,Persoon koper){
         return null;
 
     }

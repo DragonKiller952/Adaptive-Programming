@@ -29,9 +29,9 @@ public class Main {
 
 
 // Druk de volgende transacties af (pas de code aan)
-        p1.verkoop(g1, p3);
-        p2.verkoop(g2, p3);
-        p2.verkoop(g1, p1);
+        System.out.println(p1.verkoop(g1, p3));
+        System.out.println(p2.verkoop(g2, p3));
+        System.out.println(p2.verkoop(g1, p1));
 
 
 // Druk personen p1 p2 p3 nu af naar de console

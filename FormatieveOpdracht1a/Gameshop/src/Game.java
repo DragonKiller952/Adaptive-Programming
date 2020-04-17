@@ -11,7 +11,8 @@ public class Game {
     }
 
     public String toString(){
-        return naam + " " + releaseJaar + " " + prijs;
+        String newPrice = String.format("%.2f",prijs*(Math.pow(0.7, (LocalDate.now().getYear()-releaseJaar))));
+        return naam + ", uitgegeven in " + releaseJaar + "; nieuwprijs: " + prijs+" nu voor : €"+newPrice+"\n";
     }
     public double getPrice(){
         return this.prijs;

@@ -23,17 +23,25 @@ public class Main {
         System.out.println(p2.koop(g2));
         System.out.println(p2.koop(g1));
         System.out.println(p3.koop(g3));
+        System.out.println();
 
 
 // Druk personen p1 p2 p3 nu af naar de console
+        System.out.println("p1: "+p1.toString());
+        System.out.println("p2: "+p2.toString());
+        System.out.println("p3: "+p3.toString());
 
 
 // Druk de volgende transacties af (pas de code aan)
         System.out.println(p1.verkoop(g1, p3));
         System.out.println(p2.verkoop(g2, p3));
         System.out.println(p2.verkoop(g1, p1));
+        System.out.println();
 
 
 // Druk personen p1 p2 p3 nu af naar de console
+        System.out.println("p1: "+p1.toString());
+        System.out.println("p2: "+p2.toString());
+        System.out.println("p3: "+p3.toString());
     }
 }

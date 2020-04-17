@@ -23,17 +23,58 @@ public class Persoon {
 
     public String koop(Game game){
         if (game != null){
-            double newPrice = game.getPrice()-((game.getPrice()/100*30)*(LocalDate.now().getYear()-game.getReleaseJaar()));
+            String newPriceRaw = String.format("%.2f",game.getPrice()*(Math.pow(0.7, (LocalDate.now().getYear()-game.getReleaseJaar()))));
+            double newPrice = Double.parseDouble(newPriceRaw);
             if (newPrice < this.budget){
-                this.budget = this.budget - newPrice;
-                games.add(game);
-                return this.naam+" koopt " +game+": gelukt";
+                 if (!hasGame(game)) {
+
+                        this.budget = this.budget - newPrice;
+                        games.add(game);
+                        return this.naam+" koopt " +game.getNaam()+": gelukt";
+                    }
             }
-            return this.naam+" koopt " +game+": niet gelukt";
+
+            return this.naam+" koopt " +game.getNaam()+": niet gelukt";
         }
         return null;
     }
+
+    public boolean hasGame(Game game) {
+        boolean hasGame = false;
+        for (Game game1 : this.games) {
+            if (game1.getNaam().equals(game.getNaam())) {
+                hasGame = true;
+            }
+        }
+        return hasGame;
+    }
+
+    public boolean otherHasGame(Game game, Persoon koper) {
+        boolean hasGame = false;
+        for (Game game1 : koper.games) {
+            if (game1.getNaam().equals(game.getNaam())) {
+                hasGame = true;
+            }
+        }
+        return hasGame;
+    }
     public String verkoop(Game g,Persoon koper){
+        if (g != null){
+            String newPriceRaw = String.format("%.2f",g.getPrice()*(Math.pow(0.7, (LocalDate.now().getYear()-g.getReleaseJaar()))));
+            double newPrice = Double.parseDouble(newPriceRaw);
+            if (newPrice < koper.budget){
+                if (hasGame(g)&&!otherHasGame(g, koper)) {
+
+                    this.budget = this.budget + newPrice;
+                    koper.budget = koper.budget - newPrice;
+                    this.games.remove(g);
+                    koper.games.add(g);
+                    return this.naam+" verkoopt " +g.getNaam()+" aan "+koper.naam+": gelukt";
+                }
+            }
+
+            return this.naam+" verkoopt " +g.getNaam()+" aan "+koper.naam+": niet gelukt";
+        }
         return null;
 
     }

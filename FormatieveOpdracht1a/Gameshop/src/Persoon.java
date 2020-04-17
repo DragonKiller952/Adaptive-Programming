@@ -23,6 +23,7 @@ public class Persoon {
 
     public String koop(Game game){
         if (game != null){
+            double newPrice = game.getPrice()-((game.getPrice()/100*30)*(LocalDate.now().getYear()-game.getReleaseJaar()));
             if (newPrice < this.budget){
                 this.budget = this.budget - newPrice;
                 games.add(game);

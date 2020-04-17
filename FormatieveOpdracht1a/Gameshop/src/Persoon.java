@@ -44,6 +44,7 @@ public class Persoon {
         for (Game game1 : this.games) {
             if (game1.getNaam().equals(game.getNaam())) {
                 hasGame = true;
+                break;
             }
         }
         return hasGame;
@@ -54,6 +55,7 @@ public class Persoon {
         for (Game game1 : koper.games) {
             if (game1.getNaam().equals(game.getNaam())) {
                 hasGame = true;
+                break;
             }
         }
         return hasGame;

@@ -5,10 +5,12 @@ public class Bestelling {
     private double totaalprijs;
     private double verzendkosten;
     private ArrayList<Item> items;
+    private Customer customer;
 
-    public Bestelling(int id){
+    public Bestelling(int id, Customer c){
         this.id = id;
         this.items = new ArrayList<>();
+        this.customer = c;
     }
     public int getId(){ // geeft het id van de bestelling
         return this.id;
@@ -49,8 +51,10 @@ public class Bestelling {
 
     public String toString() { // geeft alle info in en string en geeft een andere message als de bestelling
         // te klein is
+
         if(isValid()){
-            return "Bestelling " + id + " kost " + String.format("%.2f",totaalprijs+verzendkosten) +
+            return "Bestelling " + id + " kost " + String.format("%.2f",totaalprijs+verzendkosten- customer.berekenCadaubonTotaal()) +
+                    ", waarvan " + customer.berekenCadaubonTotaal() + " cadeaubon eraf " +
                     ", waarvan " + verzendkosten +
                     " verzendkosten, en items " + items +"}\n";
         }

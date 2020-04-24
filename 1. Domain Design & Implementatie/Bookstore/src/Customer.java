@@ -5,12 +5,22 @@ public class Customer {
     private String adres;
     private String woonPlaats;
     private ArrayList<Bestelling> bestellingen;
+    private ArrayList<CadeauKaart> cadeaukaarten;
 
     public Customer(String nm,String ad,String wP){
         this.name = nm;
         this.adres = ad;
         this.woonPlaats = wP;
         this.bestellingen = new ArrayList<>();
+        this.cadeaukaarten = new ArrayList<>();
+    }
+
+    public void addCadeaukaart(CadeauKaart ck) {
+        this.cadeaukaarten.add(ck);
+    }
+
+    public void removeCadeaukaart(CadeauKaart ck) {
+        this.cadeaukaarten.remove(ck);
     }
 
     public void addBestelling(Bestelling bes){ // voegt een bestelling toe aan een customer
@@ -24,6 +34,15 @@ public class Customer {
         }
     }
 
+    public double berekenCadaubonTotaal() {
+        double amount = 0;
+        for(CadeauKaart ck:this.cadeaukaarten) {
+            amount += ck.getBalance();
+        }
+        return amount;
+    }
+
+
     public void removeBestelling(Bestelling bes){ // verwijderd een bestelling van een customer
         if(bestellingen.contains(bes)) {
             this.bestellingen.remove(bes);
@@ -32,10 +51,6 @@ public class Customer {
         else{
             System.out.println(this.name+ " bevat bestelling "+bes.getId()+" niet\n");
         }
-    }
-
-    public String getName(){ // geeft de naam van de customer
-        return this.name;
     }
 
     public String toString() { // geeft alle info in en string en geeft een andere message als de customer

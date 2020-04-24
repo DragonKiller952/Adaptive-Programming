@@ -5,6 +5,12 @@ public class Bookstore {
         Customer C2 = new Customer("Peter", "Wollegras 5", "Soest");
         Customer C3 = new Customer("Frank", "Koningstraat 8", "Baarn");
 
+        // hier geven we 1 klant een cadeaukaart
+        CadeauKaart ck1 = new CadeauKaart(25, "VVV");
+        C1.addCadeaukaart(ck1);
+
+        System.out.println("jhfjksfjksdfjksdhfjksdhjksdfhsjdk ----" +C1.berekenCadaubonTotaal());
+
         // hier maken we de boeken en cd's aan
         Book B1 = new Book("Biografie van Jansen", 29.99, "Jan Jansen");
         Book B2 = new Book("Het leven van Pieteren", 5.00, "Piet Pietersen");
@@ -13,9 +19,9 @@ public class Bookstore {
         Cd Cd1 = new Cd("Bubbelgum K.K.", 32.95, "K.K. Slider");
 
         // hier maken we de bestellingen aan, en bind ze aan customers
-        Bestelling Bes1 = new Bestelling(10);
-        Bestelling Bes2 = new Bestelling(15);
-        Bestelling Bes3 = new Bestelling(20);
+        Bestelling Bes1 = new Bestelling(10,C1);
+        Bestelling Bes2 = new Bestelling(15,C2);
+        Bestelling Bes3 = new Bestelling(20,C3);
 
         // hier voegen we items aan de bestellingen toe
         Bes1.addItem(B1);
@@ -36,7 +42,6 @@ public class Bookstore {
 
         // hier geven we customers bestellingen
         C1.addBestelling(Bes1);
-        C1.addBestelling(Bes3);
         C2.addBestelling(Bes2);
         C3.addBestelling(Bes3);
 
@@ -53,13 +58,19 @@ public class Bookstore {
         // voeren we wat andere dingen uit
         System.out.println("Veranderingen: \n");
 
-        C1.removeBestelling(Bes2);
-        C1.removeBestelling(Bes1);
+      //  C1.removeBestelling(Bes1);
         System.out.println(C1.toString());
 
         Bes3.addItem(Cd1);
+        Bes1.addItem(Cd1);
+        Bes1.addItem(Cd1);
+        Bes3.removeItem(B2);
 
         System.out.println(Bes3.toString());
+
+        System.out.println(Bes1.toString());
+        C1.removeCadeaukaart(ck1);
+        System.out.println(Bes1.toString());
 
 
 

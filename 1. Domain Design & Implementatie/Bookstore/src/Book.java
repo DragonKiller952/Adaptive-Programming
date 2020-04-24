@@ -6,7 +6,7 @@ public class Book extends Item {
         this.author = au;
     }
 
-    public String toString() {
+    public String toString() {// geeft alle info van het boek in een string
         return this.getName()+" voor €"+this.getPrice()+" door "+author;
     }
 }

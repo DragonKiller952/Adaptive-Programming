@@ -7,17 +7,10 @@ public class Item implements ItemInterface {
         this.price = pr;
     }
 
-    public String getName() {
+    public String getName() { // geeft de naam van het item
         return this.name;
-    };
-    public double getPrice() {
+    }
+    public double getPrice() { // geeft de prijs van het item
         return this.price;
-    };
-
-    public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
     }
 }

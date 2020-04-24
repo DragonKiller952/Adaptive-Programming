@@ -54,7 +54,7 @@ public class Bestelling {
 
         if(isValid()){
             return "Bestelling " + id + " kost " + String.format("%.2f",totaalprijs+verzendkosten- customer.berekenCadaubonTotaal()) +
-                    ", waarvan " + customer.berekenCadaubonTotaal() + " cadeaubon eraf " +
+                    ", waarvan " + customer.berekenCadaubonTotaal() + " eraf " +
                     ", waarvan " + verzendkosten +
                     " verzendkosten, en items " + items +"}\n";
         }

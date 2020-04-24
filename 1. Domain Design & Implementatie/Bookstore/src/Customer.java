@@ -57,7 +57,7 @@ public class Customer {
         // geen bestellingen heeft
         int counter = 0;
         StringBuilder message = new StringBuilder();
-        message.append(name).append(" woont op de ").append(adres).append(" in ").append(woonPlaats);
+        message.append(name).append(" woont op de ").append(adres).append(" in ").append(woonPlaats).append(" , heeft de cadeaukaarten ").append(cadeaukaarten);
         for (Bestelling bestelling : this.bestellingen) {
             counter+=1;
         }

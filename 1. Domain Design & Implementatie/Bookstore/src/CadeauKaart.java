@@ -7,19 +7,12 @@ public class CadeauKaart {
         this.naam = naam;
     }
 
-    public String getNaam() {
-        return naam;
-    }
-
     public double getBalance() {
         return balance;
     }
 
-    public void addCredit(double amount){
-        balance += amount;
-    }
-
-    public void withdrawCredit(double amount) {
-        balance -= amount;
+    @Override
+    public String toString() {
+        return naam +": "+ balance;
     }
 }

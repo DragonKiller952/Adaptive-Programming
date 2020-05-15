@@ -11,7 +11,7 @@ public class FSM {
         this.nodes = new ArrayList<Node>();
     }
 
-    public void run(){
+    public void run(){// runs the FSM
         nodes.add(currentNode);
 
         for (String step:program) {
@@ -26,17 +26,17 @@ public class FSM {
         }
     }
 
-    public void setCurrentNode(Node currentNode) {
+    public void setCurrentNode(Node currentNode) {// sets starting node
         this.currentNode = currentNode;
     }
 
     public void setProgram(String[] aProgam){
         program = aProgam;
-    }
+    }// sets Program
 
     @Override
     public String toString() {
-        return "FSM(" + Arrays.toString(program).toString() +
+        return "FSM(" + Arrays.toString(program) +
                 " = " + nodes+")";
     }
 }

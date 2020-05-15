@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class DTMC {
     private Node currentNode;
@@ -9,7 +8,7 @@ public class DTMC {
         this.nodes = new ArrayList<Node>();
     }
 
-    public void run(){
+    public void run(){// runs the DTMC
         while (true) {
             nodes.add(currentNode);
             if (currentNode.getEndnote()) {
@@ -20,7 +19,7 @@ public class DTMC {
     }
     public void setCurrentNode(Node currentNode) {
         this.currentNode = currentNode;
-    }
+    }// sets starting node
 
     @Override
     public String toString() {

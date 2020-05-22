@@ -1,15 +1,3 @@
-//import java.util.ArrayList;
-//
-//public class AreeList extends ArrayList {
-//
-//    public void bubblesort() {
-//        this.swap()
-//    }
-//}
-
-
-
-
 import java.util.*;
 
 public class BubbleSort {

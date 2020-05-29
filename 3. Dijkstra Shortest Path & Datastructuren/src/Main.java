@@ -7,23 +7,23 @@ public class Main {
         Node nodeE = new Node("E");
         Node nodeF = new Node("F");
 
-        Stap stap1 = new Stap(10, nodeB);
-        Stap stap2 = new Stap(15, nodeC);
-        Stap stap3 = new Stap(12, nodeD);
-        Stap stap4 = new Stap(10, nodeE);
-        Stap stap5 = new Stap(2, nodeE);
-        Stap stap6 = new Stap(15, nodeF);
-        Stap stap7 = new Stap(1, nodeF);
-        Vlucht stap8 = new Vlucht(5, nodeE);
+        Rit rit1 = new Rit(10, nodeB);
+        Rit rit2 = new Rit(15, nodeC);
+        Rit rit3 = new Rit(12, nodeD);
+        Rit rit4 = new Rit(10, nodeE);
+        Rit rit5 = new Rit(2, nodeE);
+        Rit rit6 = new Rit(15, nodeF);
+        Rit rit7 = new Rit(1, nodeF);
+        Rit rit8 = new Rit(5, nodeE);
 
-        nodeA.addStap(stap1);
-        nodeA.addStap(stap2);
-        nodeB.addStap(stap3);
-        nodeC.addStap(stap4);
-        nodeD.addStap(stap5);
-        nodeB.addStap(stap6);
-        nodeD.addStap(stap7);
-        nodeF.addStap(stap8);
+        nodeA.addStap(rit1);
+        nodeA.addStap(rit2);
+        nodeB.addStap(rit3);
+        nodeC.addStap(rit4);
+        nodeD.addStap(rit5);
+        nodeB.addStap(rit6);
+        nodeD.addStap(rit7);
+        nodeF.addStap(rit8);
 
         Kaart k1 = new Kaart();
         k1.addNode(nodeA);

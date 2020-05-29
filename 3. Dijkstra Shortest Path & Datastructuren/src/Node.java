@@ -11,31 +11,31 @@ public class Node implements Comparable{
         this.shortestPath = "";
     }
 
-    public void addStap(Stap stap) {
+    public void addStap(Stap stap) {//voegt een verbinding toe aan de node
         aanliggendeNodes.add(stap);
     }
 
-    public String getShortestPath() {
+    public String getShortestPath() {//geeft het shortest path terug
         return shortestPath;
     }
 
-    public void setShortestPath(String shortestPath) {
+    public void setShortestPath(String shortestPath) {//set het shortest path
         this.shortestPath = shortestPath;
     }
 
-    public Integer getDistance() {
+    public Integer getDistance() {// haalt de afstand van het shortest path op
         return distance;
     }
 
-    public void setDistance(Integer distance) {
+    public void setDistance(Integer distance) {//stelt de afstand van het shortest path in
         this.distance = distance;
     }
 
-    public String getName() {
+    public String getName() {//haalt de naam van de node op
         return name;
     }
 
-    public ArrayList<Stap> getAanliggendeNodes() {
+    public ArrayList<Stap> getAanliggendeNodes() {//haalt alle verbindingen die de node heeft op, inclusief de afstanden ernaartoe
         return aanliggendeNodes;
     }
 
@@ -45,7 +45,7 @@ public class Node implements Comparable{
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Object o) {//compareTo voor de kaart om nodes met elkaar te vergelijken
         Node n = (Node) o;
         return this.distance.compareTo(n.getDistance());
     }

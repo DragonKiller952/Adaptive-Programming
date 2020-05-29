@@ -1,3 +1,9 @@
+package Tests;
+
+import Code.Kaart;
+import Code.Node;
+import Code.Stap;
+import Code.Vlucht;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

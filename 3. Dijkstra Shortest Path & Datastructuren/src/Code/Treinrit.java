@@ -1,7 +1,11 @@
+package Code;
+
+import Code.Node;
+
 public class Treinrit extends Stap {
     int minuten;
 
-    public Treinrit(int minuten, Node bestemming) {//innitialiseert em maakt een verbinding met Stap
+    public Treinrit(int minuten, Node bestemming) {//innitialiseert em maakt een verbinding met Code.Stap
         super(bestemming);
         this.minuten = minuten;
     }

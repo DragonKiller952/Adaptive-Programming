@@ -1,7 +1,11 @@
+package Code;
+
+import Code.Node;
+
 public class Vlucht extends Stap {
     int euros;
 
-    public Vlucht(int euros, Node bestemming) {//innitialiseert em maakt een verbinding met Stap
+    public Vlucht(int euros, Node bestemming) {//innitialiseert em maakt een verbinding met Code.Stap
         super(bestemming);
         this.euros = euros;
     }

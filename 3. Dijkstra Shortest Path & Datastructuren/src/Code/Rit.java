@@ -1,7 +1,11 @@
+package Code;
+
+import Code.Node;
+
 public class Rit extends Stap {
     int kilometers;
 
-    public Rit(int kilometers, Node bestemming) {//innitialiseert em maakt een verbinding met Stap
+    public Rit(int kilometers, Node bestemming) {//innitialiseert em maakt een verbinding met Code.Stap
         super(bestemming);
         this.kilometers = kilometers;
     }

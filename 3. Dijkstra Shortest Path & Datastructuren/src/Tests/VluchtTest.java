@@ -1,24 +1,28 @@
+package Tests;
+
+import Code.Node;
+import Code.Vlucht;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StapTest {
-    Stap stap1;
+class VluchtTest {
+    Vlucht vlucht1;
 
     @BeforeEach
     void setUp() {
         Node nodeB = new Node("B");
-        stap1 = new Stap(10, nodeB);
+        vlucht1 = new Vlucht(10, nodeB);
     }
 
     @Test
     void getAfstand() {
-        assertEquals(10,stap1.getAfstand(), "It has to be 10");
+        assertEquals(10,vlucht1.getAfstand(), "It has to be 10");
     }
 
     @Test
     void getBestemming() {
-        assertEquals("B, []",stap1.getBestemming().toString(), "It has to be B, []");
+        assertEquals("B, []",vlucht1.getBestemming().toString(), "It has to be B, []");
     }
 }

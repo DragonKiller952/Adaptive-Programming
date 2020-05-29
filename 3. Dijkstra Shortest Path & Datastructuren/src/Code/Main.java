@@ -1,3 +1,8 @@
+package Code;
+
+import Code.Kaart;
+import Code.Node;
+
 public class Main {
     public static void main(String[] program){
         Node nodeA = new Node("A");

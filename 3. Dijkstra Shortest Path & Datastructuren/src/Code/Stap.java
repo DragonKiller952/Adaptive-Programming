@@ -1,8 +1,12 @@
+package Code;
+
+import Code.Node;
+
 public class Stap {
     private int afstand;
     private Node bestemming;
 
-    public Stap(Node bestemming) {// initialiseert Stap voor  de classes die het extenden
+    public Stap(Node bestemming) {// initialiseert Code.Stap voor  de classes die het extenden
         this.bestemming = bestemming;
     }
 
@@ -11,7 +15,7 @@ public class Stap {
         this.bestemming = bestemming;
     }
 
-    public int getAfstand() {// haalt de afstand op van Stap
+    public int getAfstand() {// haalt de afstand op van Code.Stap
         return afstand;
     }
 
